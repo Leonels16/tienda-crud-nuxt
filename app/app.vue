@@ -217,7 +217,28 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import Swal from 'sweetalert2'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import Swal from 'sweetalert2'
 
+// 📍 INYECCIÓN FORZADA DE ESTILOS PARA GITHUB PAGES
+useHead({
+  link: [
+    {
+      rel: 'stylesheet',
+      href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'
+    }
+  ],
+  script: [
+    {
+      src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
+      tagPosition: 'bodyClose'
+    }
+  ]
+})
 const API_URL = 'https://backservicetest-g8emcvdff0fqe2b8.canadacentral-01.azurewebsites.net/api/producto'
 
 const productos = ref([])
