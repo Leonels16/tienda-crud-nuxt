@@ -217,8 +217,6 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import Swal from 'sweetalert2'
-import { ref, computed, onMounted, onUnmounted } from 'vue'
-import Swal from 'sweetalert2'
 
 // 📍 INYECCIÓN FORZADA DE ESTILOS PARA GITHUB PAGES
 useHead({
